@@ -26,3 +26,6 @@ data/*
 # csv
 csv/*
 !csv/.gitkeep
+
+# mac
+.DS_Store

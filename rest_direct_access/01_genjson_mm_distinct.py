@@ -41,13 +41,29 @@ with open('./data/test2.json', "w") as json_file:
 
 """ write the distinct body in a csv """
 filename = "{}.csv".format(path)
-filepath = "./csv/{}"
-with open('path/to/csv_file', 'w') as f:
-    # create the csv writer
-    writer = csv.writer(f)
+filepath = "./csv/{}".format(filename)
+with open(filepath, 'w') as csv_file:
+    writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    # header of the CSV file
+    header = [
+        "message body",
+        "record name"
+    ]
+    writer.writerow(header)
+    # get all the array of dicts
+    mail_messages = data["mail_message"]
+    # loop through every mail message dict
+    for each_message in mail_messages:
+        row = []
+        # add each attribute to row
+        row.append(each_message["body"])
+        row.append(each_message["record_name"])
+        writer.writerow(row)
+        
+
 
     # write a row to the csv file
-    writer.writerow(row)
+    # writer.writerow(row)
 
 
 
