@@ -17,7 +17,3 @@ After cloning the project, make sure there is no application that is using the p
     - Update the endpoint : `http://graphql-engine:8080/api/rest/{your-custom-endpoint}`
         > e.g. `http://graphql-engine:8080/api/rest/getAccountInvoice`
 
-## To do:
-- web page to see the logs in the application
-- to access the different endpoints
-- to be able to query the endpoint, process and return the csv files
