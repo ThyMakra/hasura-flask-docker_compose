@@ -18,3 +18,11 @@ venv
 
 # vscode
 .vscode/
+
+# data 
+data/*
+!data/.gitkeep
+
+# csv
+csv/*
+!csv/.gitkeep
