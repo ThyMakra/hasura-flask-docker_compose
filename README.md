@@ -5,6 +5,10 @@ After cloning the project, make sure there is no application that is using the p
     This command can be used to rebuild the application everytime the code is changed 
     ```bash
     docker-compose up --build -d
+
+## Directories & Files
+1. `rest_direct_access/` : contains the Python file that can be run directly to access the Hasura REST endpoint.
+
     ```
 
 ## Access the application
